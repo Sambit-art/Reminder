@@ -2,6 +2,9 @@
 It is a simple app which reminds you for your schedule
 
 
-To run this code you need to install electron.js.
-Note that all file are in same directory.
+You can use it with your browser, run index.html.
 
+
+Or to run this code with electron.js keep all files are in same directory.
+
+Or you can download the complete app
