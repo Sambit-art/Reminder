@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>My App</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h1>Reminder</h1>
+	
+		<form class="mid" action="main.html">
+		<label>Set Hour</label>
+		<input placeholder="Hour" id="sethr" ><br>
+		<label>Set Minute</label>
+		<input placeholder="Minute" id="setmin" ><br>
+		<label for="">Set Your Text</label>
+		<input id="remtext" placeholder="Reminder"><br>
+		<input id="btn"  type="submit" value="Save" >
+		<input style="background-color: red; cursor: pointer;" value="Exit" onclick="window.top.close();return false">
+		<input style="background-color: rgb(231, 229, 91);color: blue;cursor: pointer;" value="Help" onclick="help()">
+			
+	</form>
+	<script>
+		
+		function help(){
+			alert("You must use your time in 24hr format.The window is not resizable.You can exit by clicking Exit Button")
+		}
+		var hour=0;
+		var minute=0;
+		var rem="hi,remind you";
+		
+		setInterval(refresh,100)
+		function refresh(){
+			hour=Number(document.getElementById("sethr").value);
+			minute=Number(document.getElementById("setmin").value);
+			rem=document.getElementById("remtext").value;
+			localStorage.setItem("remtext",rem);
+			localStorage.setItem("hourvalue",hour);
+			localStorage.setItem("minutevalue",minute);
+		}
+
+
+	</script>
+	
+</body>
+</html>

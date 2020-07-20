@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="mid">
+        <label for="">Successfully Save Your Value</label><br>
+        <label>Hour => </label>
+        <input type="text" id="sethr"><br>
+        <label for="">Minute=></label>
+        <input type="text" id="setmin"><br>
+        <label style="color: red; font-size: 30px; margin-top: 10px;">Ok! I shall remind you.</label>
+        <input style="background-color: red; cursor: pointer;" value="Exit" onclick="window.top.close();return false">
+    </div>
+    <script>
+        var hour=localStorage.getItem("hourvalue")
+        var minute=localStorage.getItem("minutevalue")
+        document.getElementById("sethr").value=hour;
+        document.getElementById("setmin").value=minute;
+         var rem=localStorage.getItem("remtext");
+         console.log(rem);
+
+        
+
+		setInterval(myfunc,1000)
+			function myfunc(){
+			
+			var originaldate= new Date();
+			var originalhour=originaldate.getHours()
+			var originalminute=originaldate.getMinutes()
+			var originalsecond=originaldate.getSeconds()
+			
+			// console.log(hour);
+			if (hour==originalhour) {
+				if(minute==originalminute){
+                    
+
+	            Notification.requestPermission().then(function(result){
+		        var mynotification= new Notification('Notification',{
+			    "body":rem
+			
+
+		});
+	});
+
+
+				}else {
+					// console.log("min not match")
+				}
+			}else {
+				// console.log("hour not match");
+			}
+
+		
+};
+
+
+    </script>
+</body>
+</html>

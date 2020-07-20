@@ -1,0 +1,41 @@
+body{
+	margin: 0;
+	padding: 0;
+	background-color: #000000eb;
+	color: white;
+}
+h1{
+	color: red;
+	text-align: center;
+}
+.mid{
+	border: 5px double blue;
+	padding: 30px;
+	padding-bottom: 17px;
+	width: fit-content;
+	margin: 10px auto;
+}
+.mid input{
+	background: #f9f0f01f;
+    border: none;
+    border-bottom: 1px solid white;
+    border-radius: 25px;
+    height: 27px;
+    text-align: center;
+    margin: 5px;
+    margin-left: 26px;
+	margin-top: 10px;
+	color: white;
+
+}
+
+#btn{
+	height: 33px;
+    background-color: #030403cf;
+    width: 84px;
+    border-radius: 25px;
+    margin: 20px 81px;
+    color: red;
+    font-size: 21px;
+    font-weight: bold;
+}
